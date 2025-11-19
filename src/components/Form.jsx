@@ -13,11 +13,11 @@ const Form = () => {
         console.log(email, password);  
         localStorage.setItem(email, JSON.stringify([email, password]))
     }
-      if (!(email.includes("@") && email.includes("."))) {
-        console.log("Enter a valid email");
-      } else {
-        console.log("Good");
-      }
+    //   if (!(email.includes("@") && email.includes("."))) {
+    //     console.log("Enter a valid email");
+    //   } else {
+    //     console.log("Good");
+    //   }
 
  
   return (

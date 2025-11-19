@@ -1,9 +1,11 @@
 import React from "react";
 
-const Button = () => {
+const Button = (props) => {
+  const item = props
   return (
     <>
       <button
+      className=""
         style={{
           backgroundColor: "red",
           color: "white",
@@ -12,7 +14,8 @@ const Button = () => {
           borderRadius: "4px",
         }}
       >
-        Login
+        {item.name}
+        {item.icon}
       </button>
     </>
   );

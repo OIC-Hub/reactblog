@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Mortal from "/Wood.png"
 import Pokergame from "/pokergame.png"
 import { FaAddressBook, FaAirbnb, FaCartPlus, FaGlobe } from 'react-icons/fa';
 
 const Card = () => {
+    const [modal, setModal] = useState(false)
+      const handleModal = () => {
+        setModal(true)
+      };
     const data = [
       {
         img: Mortal,
@@ -34,10 +38,11 @@ const Card = () => {
         desc: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus quos vitae quia sapiente sint aliquam deleniti tempore hic nihil libero at, perspiciatis suscipit asperiores, minus necessitatibus fugit repudiandae corrupti maiores.`,
       },
     ];
+  
   return (
     <>
      <div className='card' style={{display: "flex", justifyContent: "space-evenly", gap: "4px"}}>
-        {
+        {data.length == 0 ? "Data is not available" :
             data.map((item, index)=>(
                 <div key={index} style={{border: "1px solid grey", padding: "5px", borderRadius: "8px"}}>
                    <img src={item.img} alt={item.title} />
@@ -46,12 +51,14 @@ const Card = () => {
                    <p>{item.desc}</p>
                    <p>{item.icon}</p>
                    <FaCartPlus />
-                   <button>Buy Now</button>
+                   <button onClick={handleModal}>Buy Now</button>
                 </div>
             ))
         }
      </div>
-    
+      {
+        modal && <div><h1>This is a modal</h1></div>
+      }
     
     
     
