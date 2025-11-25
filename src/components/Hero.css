@@ -1,0 +1,56 @@
+#hero-img {
+  background: url("/garden.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  object-fit: cover;
+  position: relative;
+}
+
+#hero-text {
+  position: absolute;
+  top: 50px;
+  translate: -50%, -50%;
+  transform: scale();
+  /* margin: 100px 500px; */
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background: rgba(214, 211, 211, 0.292);
+  /* margin: auto;
+  max-width: 300px; */
+}
+
+#banner {
+    background-color: white;
+    color: black;
+    position: absolute;
+    bottom: -50px;
+    padding: 30px;
+    width: 80%;
+    margin: 0 50px;
+    border-radius: 4px;
+}
+
+#banner input {
+    outline: auto;
+    width: 450px;
+    padding: 4px;
+    margin: 0 10px;
+}
+
+#hero {
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 420px) {
+  #hero-text {
+    font-size: 20px;
+  }
+
+  #banner {
+    margin: 0 50px;
+  }
+}
