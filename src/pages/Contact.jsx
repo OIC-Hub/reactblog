@@ -10,9 +10,6 @@ const Contact = () => {
         <Practice />
         <Recipe />
     </div>
-    
-    
-    
     </>
   )
 }
