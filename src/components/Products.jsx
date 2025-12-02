@@ -10,8 +10,6 @@ const Products = () => {
             const response = await axios.get("https://dummyjson.com/products")
             setProducts(response.data.products)
             console.log(response.data.products);
-            
-
         }
         fetchApi()
     }, [])
